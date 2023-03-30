@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Itung</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: darkslategray">
+    <h1>Perhitungan Zakat Maal perak</h1>
+    <label for="">Masukkan Jumlah Perak Anda</label><br />
+    <input type="number" id="emas" /><br />
+    <button id="hitung" style="margin-top: 10px">Hitung</button>
+    <div id="output"></div>
+
+    <!--javascript-->
+    <script>
+      const emas = document.getElementById("emas");
+      const hitung = document.getElementById("hitung");
+      const output = document.getElementById("output");
+
+      hitung.addEventListener("click", function () {
+        let e = emas.value;
+        let total = 0.025 * e;
+        output.innerHTML = `zakat yang harus anda bayarkan adalah ${total}`;
+      });
+    </script>
+    <div class="d-grid gap-2 d-md-flex justify-content-rb-end">
+      <button
+        class="btn btn-primary me-rb-2"
+        type="button"
+        style="margin-top: 15px"
+      >
+        <a
+          href="index.html"
+          style="
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+          "
+          >Kembali</a
+        >
+      </button>
+    </div>
+    <script src="../Assets/js/bootstrap.js" async defer></script>
+
+    <!--batasjs-->
+  </body>
+</html>

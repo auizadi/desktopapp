@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Maal Uang</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Perhitungan Zakat Maal Uang</h1>
+    <label for="">Masukkan Jumlah Uang Anda</label><br />
+    <input type="number" id="uang" /><br />
+    <button id="hitung" style="margin-top: 10px">Hitung</button>
+    <div id="output"></div>
+    <script>
+      const uang = document.getElementById("uang");
+      const hitung = document.getElementById("hitung");
+      const output = document.getElementById("output");
+
+      hitung.addEventListener("click", function () {
+        let u = uang.value;
+        let total = 0.025 * u;
+        output.innerHTML = `zakat yang harus anda bayarkan adalah ${total}`;
+      });
+    </script>
+    <script src="../Assets/js/bootstrap.js" async defer></script>
+  </body>
+</html>
